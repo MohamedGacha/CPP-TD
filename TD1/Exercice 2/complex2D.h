@@ -54,6 +54,8 @@ public:
     // Méthode pour le conjugué du nombre complexe
     Complex2D conjugate() const;
 
+    Complex2D rotate(double teta) const;
+
     // Override de l'opérateur << pour l'affichage
     friend std::ostream& operator<<(std::ostream& os, const Complex2D& c);
 };

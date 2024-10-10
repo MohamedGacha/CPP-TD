@@ -88,6 +88,19 @@ Complex2D Complex2D::conjugate() const {
     return Complex2D(real, -imaginary);
 }
 
+Complex2D Complex2D::rotate(double theta) const {
+    // Calculer cos(theta) et sin(theta)
+    double cos_theta = std::cos(theta);
+    double sin_theta = std::sin(theta);
+
+    // Multiplier le nombre complexe par cos(theta) + i*sin(theta)
+    double new_real = real * cos_theta - imaginary * sin_theta;
+    double new_imag = real * sin_theta + imaginary * cos_theta;
+
+    // Retourner le nombre complexe après rotation
+    return Complex2D(new_real, new_imag);
+}
+
 // Override de l'opérateur << pour l'affichage
 std::ostream& operator<<(std::ostream& os, const Complex2D& c) {
     os << c.real << " + " << c.imaginary << "i";

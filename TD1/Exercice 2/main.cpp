@@ -34,5 +34,16 @@ int main() {
         std::cout << "c1 and c2 are not equal" << std::endl;
     }
 
+
+    Complex2D z1(1.0, 0.0);  // 1 + 0i
+
+    // Rotation de z1 par un angle de 90 degrés (pi/2 radians)
+    double theta = M_PI / 2;  // 90 degrés en radians
+    Complex2D rotated_z1 = z1.rotate(theta);
+
+    std::cout << "z1: " << z1 << std::endl;
+    std::cout << "après rotaions de 90 degrés: " << rotated_z1 << std::endl;
+
+
     return 0;
 }
