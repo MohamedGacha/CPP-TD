@@ -56,6 +56,10 @@ public:
 
     Complex2D rotate(double teta) const;
 
+    // Méthode pour calculer l'inverse
+    Complex2D inverse() const;
+
+
     // Override de l'opérateur << pour l'affichage
     friend std::ostream& operator<<(std::ostream& os, const Complex2D& c);
 };

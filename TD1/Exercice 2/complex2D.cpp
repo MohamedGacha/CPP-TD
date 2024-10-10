@@ -101,6 +101,16 @@ Complex2D Complex2D::rotate(double theta) const {
     return Complex2D(new_real, new_imag);
 }
 
+// Méthode pour calculer l'inverse
+Complex2D Complex2D::inverse() const {
+    double denominator = modulus() * modulus();  // |z|^2
+    if (denominator == 0) {
+        throw std::runtime_error("Inverse of zero is undefined.");
+    }
+    Complex2D conj = conjugate();  // z* = a - bi
+    return Complex2D(conj.getReal() / denominator, conj.getImaginary() / denominator);
+}
+
 // Override de l'opérateur << pour l'affichage
 std::ostream& operator<<(std::ostream& os, const Complex2D& c) {
     os << c.real << " + " << c.imaginary << "i";

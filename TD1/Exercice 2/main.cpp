@@ -44,6 +44,12 @@ int main() {
     std::cout << "z1: " << z1 << std::endl;
     std::cout << "après rotaions de 90 degrés: " << rotated_z1 << std::endl;
 
+     try {
+        Complex2D z1_inverse = z1.inverse();
+        std::cout << "Inverse of z1: " << z1_inverse << std::endl;
+    } catch (const std::runtime_error& e) {
+        std::cerr << e.what() << std::endl;
+    }
 
     return 0;
 }
