@@ -1,26 +1,47 @@
-# Matrix Numerical Operations
+# Matrix Program
 
-This project demonstrates basic matrix operations, including addition, multiplication, determinant calculation, and matrix inversion. It uses C++ classes to handle matrices with numerical values (integers, floats, etc.) and supports operations such as matrix arithmetic and computing the inverse using the cofactor method.
+This project defines a matrix library in C++ that includes classes for matrix operations. The library consists of two main classes: `MatrixBase` for general matrix functionality and `MatrixNumerical` for specific operations on numerical matrices.
 
 ## Features
-- Matrix creation and element access
-- Matrix addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`)
-- Determinant calculation
-- Inverse matrix calculation (for square matrices)
-- Identity matrix creation
 
-## Files
-- **MatrixBase.h**: Defines the base class for matrix handling, including element access and display.
-- **MatrixNumerical.h**: Defines a template-based class inheriting from `MatrixBase` for numerical matrices.
-- **MatrixNumerical.cpp**: Contains the implementation of `MatrixNumerical` methods such as determinant and inverse calculation.
-- **main.cpp**: The main program demonstrating the use of the `MatrixNumerical` class with matrix operations.
+- Define a 2D matrix with template support.
+- Perform basic operations like addition, subtraction, multiplication, and division.
+- Calculate determinants and inverses of numerical matrices.
+- Generate identity matrices.
 
-## How to Build
-You can build the project using the provided `build.sh` script or by manually compiling the files with `g++`.
+## Class Definitions
 
-### Option 1: Using the `build.sh` script
-Run the following command in the terminal:
+1. **MatrixBase**: 
+   - Contains data, rows, and cols.
+   - Functions:
+     - `addElement`: Add an element to the matrix.
+     - `getElement`: Retrieve an element from the matrix.
+     - `getRows`: Get the number of rows.
+     - `getCols`: Get the number of columns.
+     - `Display`: Display the matrix.
 
-```bash
-./build.sh
+2. **MatrixNumerical** (inherits from `MatrixBase`): 
+   - Specializes in numerical values (int, double, float).
+   - Functions:
+     - `getDeterminant`: Calculate the determinant.
+     - Overloaded operators `+`, `-`, `*`, and `/`.
+     - `getInverse`: Calculate the inverse using the cofactor method.
+     - Static function `getIdentity`: Generate an identity matrix.
 
+## Build Instructions
+
+To build the program, you can use the provided `build.sh` script. Follow the steps below:
+
+### Prerequisites
+
+Ensure you have the following installed:
+- A C++ compiler (e.g., g++, clang++)
+- Make (if using makefiles)
+
+### Steps to Build
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository_url>
+   cd <repository_directory>
