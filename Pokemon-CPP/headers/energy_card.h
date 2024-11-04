@@ -19,4 +19,4 @@ public:
     }
 };
 
-#endif // ENERGY_CARD_H
+#endif

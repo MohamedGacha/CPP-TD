@@ -26,4 +26,4 @@ public:
     }
 };
 
-#endif // TRAINER_CARD_H
+#endif

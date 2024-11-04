@@ -15,4 +15,4 @@ public:
     virtual void displayInfo() const = 0; // Pure virtual function
 };
 
-#endif // CARD_H
+#endif

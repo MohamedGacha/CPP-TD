@@ -60,8 +60,6 @@ public:
         }
         return std::get<3>(attacks[index]); // Return damage
     }
-    
-    // Other member functions and attributes
 };
 
-#endif // POKEMON_CARD_H
+#endif 

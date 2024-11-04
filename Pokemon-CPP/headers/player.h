@@ -38,8 +38,6 @@ public:
             if (energyCard) {
                 std::cout << playerName << " is attaching Energy Card of type " << energyCard->getEnergyType() 
                           << " to the Pokemon " << actionCards[actionCardIndex]->getCardName() << "\n";
-                // You could add code here to manage energy costs on the PokemonCard
-                // (e.g., increment current energy storage for the attack)
             }
         }
     }
@@ -47,14 +45,14 @@ public:
     void displayBench() const {
         std::cout << "Bench cards for Player " << playerName << ":\n";
         for (const auto& card : benchCards) {
-            card->displayInfo(); // Ensure Card has displayInfo()
+            card->displayInfo();
         }
     }
 
     void displayAction() const {
         std::cout << "Action cards for Player " << playerName << ":\n";
         for (const auto& pokemon : actionCards) {
-            pokemon->displayInfo(); // Ensure PokemonCard has displayInfo()
+            pokemon->displayInfo();
         }
     }
 
@@ -81,4 +79,4 @@ public:
     }
 };
 
-#endif // PLAYER_H
+#endif
